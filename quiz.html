@@ -7,12 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container" id="quizContainer">
-    <h1>문제 풀이</h1>
-    <form id="quizForm"></form>
-    <button onclick="submitQuiz()">채점하기</button>
+  <div class="quiz-wrapper">
+    <div class="question-panel">
+      <div id="questionBox"></div>
+      <div id="choicesBox"></div>
+      <div class="nav-buttons">
+        <button onclick="prevQuestion()">이전</button>
+        <button onclick="nextQuestion()">다음</button>
+        <button onclick="submitQuiz()">답안 제출</button>
+      </div>
+    </div>
+    <div class="answer-sheet" id="answerSheet"></div>
   </div>
   <script src="data.js"></script>
-  <script src="script.js"></script>
+  <script src="script_v2.js"></script>
 </body>
 </html>

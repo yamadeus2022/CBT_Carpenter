@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CBT 입장</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>입장 코드 입력</h1>
+    <input type="password" id="pinInput" maxlength="4" placeholder="PIN 4자리">
+    <button onclick="checkPIN()">입장</button>
+    <p id="error" class="error"></p>
+  </div>
+  <script>
+    function checkPIN() {
+      const input = document.getElementById('pinInput').value;
+      if (input === '1234') {
+        window.location.href = 'quiz.html';
+      } else {
+        document.getElementById('error').textContent = '잘못된 PIN입니다.';
+      }
+    }
+  </script>
+</body>
+</html>
